@@ -1,8 +1,8 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yoshtube</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -12,29 +12,26 @@
     <p>Streaming video bebas dan responsif</p>
   </header>
 
-  <div class="ad-container">
-    <!-- Ganti dengan kode iklan Adsterra -->
-    <script type="text/javascript">
-      atOptions = {
-        'key' : 'YOUR_AD_KEY',
-        'format' : 'iframe',
-        'height' : 250,
-        'width' : 300,
-        'params' : {}
-      };
-      document.write('<script type="text/javascript" src="https://www.profitabledisplaynetwork.com/YOUR_AD_SCRIPT.js"><\/script>');
-    </script>
-  </div>
+  <main>
+    <section class="featured-video">
+      <h2>Video Utama</h2>
+      <div class="video-card">
+        <iframe width="600" height="480" src="https://dsvplay.com/e/j76jq4svkvtj" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
+      </div>
+    </section>
 
-  <div class="video-grid">
-    <div class="video-card">
-      <h3>Judul Video</h3>
-      <a href="video.html"><img src="https://via.placeholder.com/300x180.png?text=Thumbnail" alt="Thumbnail"></a>
-    </div>
-  </div>
+    <section class="recommended-videos">
+      <h2>Rekomendasi / Video Terbaru</h2>
+      <div class="video-card">
+        <iframe width="600" height="480" src="https://dsvplay.com/e/iadadvtdckn6" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
+      </div>
+    </section>
+  </main>
 
   <footer>
     &copy; 2025 Yoshtube. Dibuat oleh Hansalrl.
   </footer>
+
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

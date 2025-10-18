@@ -1,42 +1,35 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yoshtube - Video</title>
+  <title>Yoshtube - Pemutar Video</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <header>
     <h1>Yoshtube</h1>
-    <p>Menonton video pilihanmu</p>
+    <p>Pemutar Video</p>
   </header>
 
-  <div class="ad-container">
-    <!-- Ganti dengan kode iklan Adsterra -->
-    <script type="text/javascript">
-      atOptions = {
-        'key' : 'YOUR_AD_KEY',
-        'format' : 'iframe',
-        'height' : 250,
-        'width' : 300,
-        'params' : {}
-      };
-      document.write('<script type="text/javascript" src="https://www.profitabledisplaynetwork.com/YOUR_AD_SCRIPT.js"><\/script>');
-    </script>
-  </div>
+  <main>
+    <section class="video-player">
+      <h2>Video yang Diputar</h2>
+      <div class="video-card">
+        <iframe id="videoFrame" width="600" height="480" src="https://dsvplay.com/e/j76jq4svkvtj" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
+      </div>
+    </section>
 
-  <main style="padding: 20px;">
-    <h2>Judul Video</h2>
-    <video width="100%" controls>
-      <source src="videos/video1.mp4" type="video/mp4">
-      Browser tidak mendukung video.
-    </video>
-    <p>Deskripsi video akan ditampilkan di sini.</p>
+    <section class="history">
+      <h2>Riwayat Video Ditonton</h2>
+      <ul id="historyList"></ul>
+    </section>
   </main>
 
   <footer>
     &copy; 2025 Yoshtube. Dibuat oleh Hansalrl.
   </footer>
+
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

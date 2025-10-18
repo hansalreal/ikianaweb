@@ -1,36 +1,79 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Yoshtube</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
   <header>
     <h1>Yoshtube</h1>
-    <p>Streaming video bebas dan responsif</p>
+    <input type="text" placeholder="Cari video..." />
+    <div id="login-buttons">
+      <button onclick="showLogin()">Login</button>
+      <button onclick="showRegister()">Register</button>
+      <div id="g_id_onload"
+           data-client_id="YOUR_GOOGLE_CLIENT_ID"
+           data-context="signin"
+           data-callback="handleGoogleLogin"
+           data-auto_prompt="false">
+      </div>
+      <div class="g_id_signin" data-type="standard"></div>
+    </div>
   </header>
 
-  <main>
-    <section class="featured-video">
-      <h2>Video Utama</h2>
-      <div class="video-card">
-        <iframe width="600" height="480" src="https://dsvplay.com/e/j76jq4svkvtj" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
-      </div>
-    </section>
+  <div id="ad-warning" class="hidden">Harap matikan AdBlock untuk melanjutkan.</div>
+  <div id="ad-container" class="hidden">
+    <script type="text/javascript">
+      atOptions = {
+        'key' : 'YOUR_AD_KEY',
+        'format' : 'iframe',
+        'height' : 250,
+        'width' : 300,
+        'params' : {}
+      };
+      document.write('<script type="text/javascript" src="https://www.profitabledisplaynetwork.com/YOUR_AD_SCRIPT.js"><\/script>');
+    </script>
+  </div>
 
-    <section class="recommended-videos">
-      <h2>Rekomendasi / Video Terbaru</h2>
-      <div class="video-card">
-        <iframe width="600" height="480" src="https://dsvplay.com/e/iadadvtdckn6" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
-      </div>
+  <main>
+    <section>
+      <h2>Video Utama</h2>
+      <iframe width="600" height="480" src="https://dsvplay.com/e/j76jq4svkvtj" frameborder="0" allowfullscreen></iframe>
+    </section>
+    <section>
+      <h2>Upload Terbaru</h2>
+      <iframe width="600" height="480" src="https://dsvplay.com/e/iadadvtdckn6" frameborder="0" allowfullscreen></iframe>
+    </section>
+    <section>
+      <h2>Rekomendasi</h2>
+      <div id="recommendations"></div>
     </section>
   </main>
 
   <footer>
-    &copy; 2025 Yoshtube. Dibuat oleh Hansalrl.
+    <a href="privacy.html">Kebijakan Privasi</a>
+    <p>&copy; 2025 Yoshtube</p>
   </footer>
+
+  <div id="login-modal" class="modal hidden">
+    <h3>Login Manual</h3>
+    <input type="text" placeholder="Username"/>
+    <input type="password" placeholder="Password"/>
+    <button onclick="loginManual()">Login</button>
+    <button onclick="closeModal()">Tutup</button>
+  </div>
+
+  <div id="register-modal" class="modal hidden">
+    <h3>Register Akun</h3>
+    <input type="text" placeholder="Username"/>
+    <input type="email" placeholder="Email"/>
+    <input type="password" placeholder="Password"/>
+    <button onclick="registerManual()">Register</button>
+    <button onclick="closeModal()">Tutup</button>
+  </div>
 
   <script src="assets/js/script.js"></script>
 </body>

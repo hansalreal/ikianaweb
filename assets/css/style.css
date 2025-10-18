@@ -1,22 +1,29 @@
-
 body {
-  background-color: #000;
+  background-color: #111;
   color: #fff;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 header, footer {
-  background-color: #111;
-  text-align: center;
+  background-color: #222;
   padding: 10px;
+  text-align: center;
 }
-main {
+section {
+  margin: 20px;
+}
+.modal {
+  position: fixed;
+  top: 20%;
+  left: 30%;
+  background: #333;
   padding: 20px;
+  border: 1px solid #555;
 }
-.video-card {
-  margin-bottom: 20px;
+.hidden {
+  display: none;
 }
-h2 {
-  color: #ffcc00;
+iframe {
+  margin: 10px 0;
 }
